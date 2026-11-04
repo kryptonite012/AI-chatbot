@@ -1,0 +1,12 @@
+{
+  "name": "AskAll",
+  "short_name": "AskAll",
+  "description": "Ask once, compare answers from every AI side by side.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090d",
+  "theme_color": "#09090d",
+  "icons": [
+    { "src": "/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
