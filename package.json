@@ -1,0 +1,28 @@
+{
+  "name": "ai-chatbot",
+  "version": "1.0.0",
+  "description": "Ask once and compare answers from ChatGPT, Gemini, Claude, Grok, DeepSeek, Perplexity, Llama and offline local models side by side.",
+  "type": "module",
+  "main": "server.js",
+  "private": true,
+  "author": "kryptonite012",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "ai",
+    "chatbot",
+    "chatgpt",
+    "gemini",
+    "claude",
+    "llm",
+    "ollama",
+    "multi-model"
+  ]
+}
