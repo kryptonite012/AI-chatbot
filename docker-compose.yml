@@ -1,0 +1,27 @@
+# Cloud models only:            docker compose up -d
+# With offline local models:    docker compose --profile offline up -d
+#                               docker compose exec ollama ollama pull llama3.2
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # Use http://host.docker.internal:11434 to reach Ollama installed on your computer instead.
+      OLLAMA_BASE_URL: ${DOCKER_OLLAMA_URL:-http://ollama:11434}
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["offline"]
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama:
